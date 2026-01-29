@@ -2,35 +2,51 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Segunda Vista</title>
-    <style>
-        /* Un estilo rápido para que no desentone tanto */
-        body {
-            background-color: #ffc0cb;
-            font-family: "Comic Sans MS", cursive, sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            color: #d63384;
-        }
-        a { 
-            margin-top: 20px; 
-            padding: 10px 20px; 
-            background: white; 
-            border: 3px dashed #d63384; 
-            text-decoration: none; 
-            color: #d63384; 
-            font-weight: bold;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>✧ Zona Musical ✧</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>¡Has llegado a la segunda vista!</h1>
-    <p>Aquí hay menos color rosa... por ahora.</p>
-    <a href="index.html">⬅ Volver al inicio cute</a>
+
+    <audio autoplay loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <main class="main-frame" style="border-color: #bd93f9; box-shadow: 8px 8px 0px #bd93f9;">
+        
+        <header>
+            <h1 style="color: #bd93f9;">✧ Now Playing ✧</h1>
+            <div class="leyenda-box">
+                <p>♫ Herb Alpert - Ladyfingers ♫</p>
+            </div>
+        </header>
+
+        <section class="content-grid">
+            
+            <article class="module img-module" style="background-color: #f8f0ff;">
+                <div class="img-frame">
+                    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDdtY2Z4ZXR6aGZ4ZXR6aGZ4ZXR6aGZ4ZXR6aGZ4ZXR6aGZ4ZXR6aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Ld9W9B7W8JqRa/giphy.gif" alt="Vibe musical">
+                </div>
+            </article>
+
+            <article class="module text-module">
+                <h2 style="background: #bd93f9;">Info</h2>
+                <p>¡Hola desde el otro lado!</p>
+                <br>
+                <p>Si escuchas la música, el navegador ha aceptado la transición de estado correctamente.</p>
+                <br>
+                <p>Hemos usado <code>&lt;audio autoplay&gt;</code> en este archivo HTML independiente.</p>
+            </article>
+
+        </section>
+
+        <footer class="action-area">
+            <a href="index.html">
+                <button type="button" class="retro-btn" style="background-color: #bd93f9;">⬅ VOLVER AL SILENCIO</button>
+            </a>
+        </footer>
+
+    </main>
+
 </body>
 </html>
