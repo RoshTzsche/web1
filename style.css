@@ -1,0 +1,166 @@
+/* style.css - Definiciones de Estilo Y2K */
+
+:root {
+    --pink-hot: #ff1493;
+    --pink-med: #ff69b4;
+    --pink-light: #ffb6c1;
+    --pink-bg: #fff0f5;
+    --border-style: 3px dashed var(--pink-hot);
+    --font-retro: "Comic Sans MS", "Arial Rounded MT Bold", cursive, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* NO SCROLL GLOBAL */
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* La restricción clave */
+    background-color: var(--pink-light);
+    background-image: 
+        linear-gradient(45deg, var(--pink-med) 25%, transparent 25%), 
+        linear-gradient(-45deg, var(--pink-med) 25%, transparent 25%), 
+        linear-gradient(45deg, transparent 75%, var(--pink-med) 75%), 
+        linear-gradient(-45deg, transparent 75%, var(--pink-med) 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    font-family: var(--font-retro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+/* Marco Principal */
+.main-frame {
+    background-color: var(--pink-bg);
+    border: var(--border-style);
+    border-radius: 20px;
+    box-shadow: 8px 8px 0px var(--pink-hot);
+    width: 100%;
+    max-width: 900px;
+    height: 100%;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Cabecera */
+header {
+    text-align: center;
+    margin-bottom: 15px;
+    flex-shrink: 0;
+}
+
+h1 {
+    color: var(--pink-hot);
+    text-shadow: 2px 2px 0px #fff, 4px 4px 0px var(--pink-med);
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.leyenda-box {
+    background: #fff;
+    border: 2px dotted var(--pink-med);
+    padding: 8px 15px;
+    display: inline-block;
+    margin-top: 10px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+/* Grid Central */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    flex-grow: 1;
+    overflow: hidden;
+    min-height: 0;
+}
+
+/* Módulos */
+.module {
+    background: #fff;
+    border: 3px double var(--pink-med);
+    padding: 15px;
+    border-radius: 12px;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.img-module {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffebf2;
+}
+
+.img-frame img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border: 4px solid var(--pink-hot);
+    padding: 3px;
+    background: white;
+    transform: rotate(-3deg);
+    transition: transform 0.3s ease;
+}
+
+.img-frame img:hover {
+     transform: rotate(0deg) scale(1.05);
+}
+
+.text-module h2 {
+    background: var(--pink-hot);
+    color: white;
+    padding: 5px 10px;
+    display: inline-block;
+    transform: skew(-10deg);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+/* Footer y Botón */
+.action-area {
+    margin-top: 15px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+a { text-decoration: none; }
+
+.retro-btn {
+    background-color: var(--pink-med);
+    color: white;
+    font-family: var(--font-retro);
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 12px 40px;
+    border: 4px outset var(--pink-light);
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.retro-btn:hover {
+    background-color: var(--pink-hot);
+    border-style: inset;
+}
+
+/* Responsive Móvil */
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+    }
+    .img-module { max-height: 200px; }
+    h1 { font-size: 1.5rem; }
+    .retro-btn { font-size: 1.1rem; padding: 10px 30px; }
+}
